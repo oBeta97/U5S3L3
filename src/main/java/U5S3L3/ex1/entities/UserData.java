@@ -2,7 +2,7 @@ package U5S3L3.ex1.entities;
 
 import U5S3L3.ex1.interfaces.DataSource;
 
-public class UserData implements DataSource {
+public class UserData {
     private String nomeCompleto;
     private int eta;
     
@@ -11,12 +11,12 @@ public class UserData implements DataSource {
         this.eta = ds.getEta();
     }
 
-    @Override
+
     public String getNomeCompleto() {
         return this.nomeCompleto;
     }
 
-    @Override
+
     public int getEta() {
         return this.eta;
     }
@@ -24,6 +24,9 @@ public class UserData implements DataSource {
     public UserData(String nomeCompleto, int eta) {
         this.nomeCompleto = nomeCompleto;
         this.eta = eta;
+    }
+
+    public UserData() {
     }
 
     @Override

@@ -23,31 +23,8 @@ public class Application {
         UserData utente2 = new UserData("Martina Rossi", 25);
         UserData utente3 = new UserData("Luca Bianchi", 40);
 
-
-        UserDataAdapter uda1 = new UserDataAdapter(persona1);
-        UserDataAdapter uda2 = new UserDataAdapter(persona2);
-        UserDataAdapter uda3 = new UserDataAdapter(persona3);
-
-        List<DataSource> dList = new ArrayList<>();
-        dList.add(utente1);
-        dList.add(utente2);
-        dList.add(utente3);
-        dList.add(uda1);
-        dList.add(uda2);
-        dList.add(uda3);
-
-        UserDbTable udt = new UserDbTable();
-
-
-        for(DataSource d : dList){
-
-            System.out.println(d.toString());
-
-            if(udt.correctData(d))
-                System.out.println(d.getNomeCompleto() + " può entrare!");
-            else
-                System.out.println(d.getNomeCompleto() + " non può entrare!");
-        }
+        UserData test = new UserData();
+        test.getData(new UserDataAdapter(persona1));
 
 
 
